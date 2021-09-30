@@ -296,4 +296,8 @@ def WorldNews9(message):
         bot.register_next_step_handler(message, WorldNews7)
         bot.register_next_step_handler(message, WorldNews8)
 
-bot.polling(none_stop=True)
+def main():
+    bot.polling(none_stop=True)
+
+if __name__ == '__main__'
+    main()
