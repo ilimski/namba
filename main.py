@@ -295,6 +295,6 @@ def WorldNews9(message):
         
 bot.polling(none_stop=True)        
 
-def main():
+    def main():
     bot.polling(none_stop=True)
 
