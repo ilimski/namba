@@ -9,8 +9,7 @@ def send_echo(message):
     markup = types.ReplyKeyboardMarkup(True, True)
     button = types.KeyboardButton("Что такое Namba One?")
     button2 = types.KeyboardButton("Часто задаваемые вопросы")
-    button3 = types.KeyboardButton("Help")
-    markup.add(button, button2, button3)
+    markup.add(button, button2)
     b = open("12.png", 'rb')
     bot.send_photo(message.chat.id, b)
     bot.send_message(message.chat.id, "Выберите кнопку:", reply_markup=markup)
@@ -44,8 +43,6 @@ def weather(message):
         bot.register_next_step_handler(message, WorldNews7)
         bot.register_next_step_handler(message, WorldNews8)
         bot.register_next_step_handler(message, WorldNews9)
-    elif message.text == 'Help':
-        bot.send_message(message.from_user.id, 'Тел:')
 
 
 @bot.message_handler(content_types=['text'])
